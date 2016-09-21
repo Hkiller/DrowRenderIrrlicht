@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "drow_irrlicht_VC10", "drow_irrlicht_VC10.vcxproj", "{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Editor|Win32 = Debug_Editor|Win32
+		Debug|Win32 = Debug|Win32
+		Release_Editor|Win32 = Release_Editor|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}.Debug_Editor|Win32.ActiveCfg = Debug_Editor|Win32
+		{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}.Debug_Editor|Win32.Build.0 = Debug_Editor|Win32
+		{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}.Debug|Win32.Build.0 = Debug|Win32
+		{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}.Release_Editor|Win32.ActiveCfg = Release_Editor|Win32
+		{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}.Release_Editor|Win32.Build.0 = Release_Editor|Win32
+		{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}.Release|Win32.ActiveCfg = Release|Win32
+		{97847F09-EFA8-4CB2-A9E5-2EB17B16B59A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
