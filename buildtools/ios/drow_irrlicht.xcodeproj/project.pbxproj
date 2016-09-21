@@ -693,8 +693,11 @@
 		C9F6A90A1D92A94F00333A28 /* SoftwareDriver2_helper.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F6A6541D92A94E00333A28 /* SoftwareDriver2_helper.h */; };
 		C9F6A90B1D92A94F00333A28 /* utf8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F6A6551D92A94E00333A28 /* utf8.cpp */; };
 		C9F6A90C1D92A94F00333A28 /* wglext.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F6A6561D92A94E00333A28 /* wglext.h */; };
-		C9F6A9111D92A97D00333A28 /* irr_runtime_module.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F6A90F1D92A97D00333A28 /* irr_runtime_module.h */; };
-		C9F6A9121D92A97D00333A28 /* irr_runtime_types.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F6A9101D92A97D00333A28 /* irr_runtime_types.h */; };
+		C9F6A91A1D92C2E100333A28 /* irr_runtime_module.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F6A9181D92C2E100333A28 /* irr_runtime_module.h */; };
+		C9F6A91B1D92C2E100333A28 /* irr_runtime_types.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F6A9191D92C2E100333A28 /* irr_runtime_types.h */; };
+		C9F6A9241D92C2FA00333A28 /* irr_runtime_module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F6A9201D92C2FA00333A28 /* irr_runtime_module.cpp */; };
+		C9F6A9251D92C2FA00333A28 /* irr_runtime_module_i.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C9F6A9211D92C2FA00333A28 /* irr_runtime_module_i.hpp */; };
+		C9F6A9281D92C6CF00333A28 /* irr_runtime_module_load.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F6A9271D92C6CF00333A28 /* irr_runtime_module_load.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1386,9 +1389,12 @@
 		C9F6A6541D92A94E00333A28 /* SoftwareDriver2_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoftwareDriver2_helper.h; sourceTree = "<group>"; };
 		C9F6A6551D92A94E00333A28 /* utf8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utf8.cpp; sourceTree = "<group>"; };
 		C9F6A6561D92A94E00333A28 /* wglext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglext.h; sourceTree = "<group>"; };
-		C9F6A90F1D92A97D00333A28 /* irr_runtime_module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = irr_runtime_module.h; sourceTree = "<group>"; };
-		C9F6A9101D92A97D00333A28 /* irr_runtime_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = irr_runtime_types.h; sourceTree = "<group>"; };
 		C9F6A9131D92A9C700333A28 /* libdrow_irrlicht.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdrow_irrlicht.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9F6A9181D92C2E100333A28 /* irr_runtime_module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = irr_runtime_module.h; sourceTree = "<group>"; };
+		C9F6A9191D92C2E100333A28 /* irr_runtime_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = irr_runtime_types.h; sourceTree = "<group>"; };
+		C9F6A9201D92C2FA00333A28 /* irr_runtime_module.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = irr_runtime_module.cpp; sourceTree = "<group>"; };
+		C9F6A9211D92C2FA00333A28 /* irr_runtime_module_i.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = irr_runtime_module_i.hpp; sourceTree = "<group>"; };
+		C9F6A9271D92C6CF00333A28 /* irr_runtime_module_load.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = irr_runtime_module_load.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1405,6 +1411,7 @@
 		54BA05AA14A1B4B500E0350A = {
 			isa = PBXGroup;
 			children = (
+				C9F6A91C1D92C2FA00333A28 /* src */,
 				C9F6A90D1D92A97D00333A28 /* include */,
 				C9F6A3921D92A94C00333A28 /* 3rdTools */,
 				C9F6A9131D92A9C700333A28 /* libdrow_irrlicht.a */,
@@ -2157,17 +2164,52 @@
 		C9F6A90D1D92A97D00333A28 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				C9F6A90E1D92A97D00333A28 /* irr_runtime */,
+				C9F6A9161D92C2E100333A28 /* irr */,
 			);
 			name = include;
 			path = ../../include;
 			sourceTree = "<group>";
 		};
-		C9F6A90E1D92A97D00333A28 /* irr_runtime */ = {
+		C9F6A9161D92C2E100333A28 /* irr */ = {
 			isa = PBXGroup;
 			children = (
-				C9F6A90F1D92A97D00333A28 /* irr_runtime_module.h */,
-				C9F6A9101D92A97D00333A28 /* irr_runtime_types.h */,
+				C9F6A9171D92C2E100333A28 /* irr_runtime */,
+			);
+			path = irr;
+			sourceTree = "<group>";
+		};
+		C9F6A9171D92C2E100333A28 /* irr_runtime */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6A9181D92C2E100333A28 /* irr_runtime_module.h */,
+				C9F6A9191D92C2E100333A28 /* irr_runtime_types.h */,
+			);
+			path = irr_runtime;
+			sourceTree = "<group>";
+		};
+		C9F6A91C1D92C2FA00333A28 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6A91D1D92C2FA00333A28 /* irr */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		C9F6A91D1D92C2FA00333A28 /* irr */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6A91E1D92C2FA00333A28 /* irr_runtime */,
+			);
+			path = irr;
+			sourceTree = "<group>";
+		};
+		C9F6A91E1D92C2FA00333A28 /* irr_runtime */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6A9271D92C6CF00333A28 /* irr_runtime_module_load.cpp */,
+				C9F6A9201D92C2FA00333A28 /* irr_runtime_module.cpp */,
+				C9F6A9211D92C2FA00333A28 /* irr_runtime_module_i.hpp */,
 			);
 			path = irr_runtime;
 			sourceTree = "<group>";
@@ -2332,7 +2374,7 @@
 				C9F6A7E01D92A94E00333A28 /* CIrrDeviceConsole.h in Headers */,
 				C9F6A6621D92A94E00333A28 /* EDeviceTypes.h in Headers */,
 				C9F6A6941D92A94E00333A28 /* IGUIFileOpenDialog.h in Headers */,
-				C9F6A9121D92A97D00333A28 /* irr_runtime_types.h in Headers */,
+				C9F6A91B1D92C2E100333A28 /* irr_runtime_types.h in Headers */,
 				C9F6A8BB1D92A94F00333A28 /* CTriangleBBSelector.h in Headers */,
 				C9F6A6C51D92A94E00333A28 /* IParticleSphereEmitter.h in Headers */,
 				C9F6A6D11D92A94E00333A28 /* irrlicht.h in Headers */,
@@ -2435,7 +2477,7 @@
 				C9F6A7C41D92A94E00333A28 /* CImageLoaderPNG.h in Headers */,
 				C9F6A6901D92A94E00333A28 /* IGUIEditBox.h in Headers */,
 				C9F6A7D21D92A94E00333A28 /* CImageWriterBMP.h in Headers */,
-				C9F6A9111D92A97D00333A28 /* irr_runtime_module.h in Headers */,
+				C9F6A91A1D92C2E100333A28 /* irr_runtime_module.h in Headers */,
 				C9F6A7361D92A94E00333A28 /* CAnimatedMeshMD2.h in Headers */,
 				C9F6A6AD1D92A94E00333A28 /* ILogger.h in Headers */,
 				C9F6A67D1D92A94E00333A28 /* IBillboardTextSceneNode.h in Headers */,
@@ -2544,6 +2586,7 @@
 				C9F6A8231D92A94F00333A28 /* COctreeTriangleSelector.h in Headers */,
 				C9F6A6A11D92A94E00333A28 /* IGUIStaticText.h in Headers */,
 				C9F6A8F81D92A94F00333A28 /* IDepthBuffer.h in Headers */,
+				C9F6A9251D92C2FA00333A28 /* irr_runtime_module_i.hpp in Headers */,
 				C9F6A6C41D92A94E00333A28 /* IParticleRotationAffector.h in Headers */,
 				C9F6A83E1D92A94F00333A28 /* COpenGLCoreCacheHandler.h in Headers */,
 				C9F6A88E1D92A94F00333A28 /* CSceneNodeAnimatorRotation.h in Headers */,
@@ -2649,7 +2692,7 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		54BA05AC14A1B4B500E0350A /* Project object */ = {
+		54BA05AC14A1B4B500E0350B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
@@ -2693,6 +2736,7 @@
 				C9F6A76D1D92A94E00333A28 /* CDMFLoader.cpp in Sources */,
 				C9F6A8B31D92A94F00333A28 /* CTRFlat.cpp in Sources */,
 				C9F6A74E1D92A94E00333A28 /* CColladaMeshWriter.cpp in Sources */,
+				C9F6A9241D92C2FA00333A28 /* irr_runtime_module.cpp in Sources */,
 				C9F6A87D1D92A94F00333A28 /* CSceneManager.cpp in Sources */,
 				C9F6A7651D92A94E00333A28 /* CDefaultGUIElementFactory.cpp in Sources */,
 				C9F6A8B91D92A94F00333A28 /* CTRGouraudWire.cpp in Sources */,
@@ -2871,6 +2915,7 @@
 				C9F6A8CC1D92A94F00333A28 /* CTRTextureGouraudNoZ.cpp in Sources */,
 				C9F6A8AC1D92A94F00333A28 /* CTerrainSceneNode.cpp in Sources */,
 				C9F6A8201D92A94F00333A28 /* COctreeSceneNode.cpp in Sources */,
+				C9F6A9281D92C6CF00333A28 /* irr_runtime_module_load.cpp in Sources */,
 				C9F6A7311D92A94E00333A28 /* C3DSMeshFileLoader.cpp in Sources */,
 				C9F6A7F71D92A94E00333A28 /* CLMTSMeshFileLoader.cpp in Sources */,
 				C9F6A7A11D92A94E00333A28 /* CGUIModalScreen.cpp in Sources */,
@@ -2934,7 +2979,6 @@
 					"$(inherited)",
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2948,7 +2992,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
@@ -2963,24 +3006,16 @@
 				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					GL_GLEXT_PROTOTYPES,
 					_APPLE,
-					"DEBUG=1",
 					"$(inherited)",
-					"PCRE2_CODE_UNIT_WIDTH=8",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
-					"DEBUG=1",
-					GL_GLEXT_PROTOTYPES,
-					_APPLE,
-				);
-				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					../../../3rdTools/zlib/include,
 					../../../3rdTools/libpng/include,
 					../../../3rdTools/libjpeg,
 					../../include,
 					../../../include,
+					../../../drow/include,
 					../../../build/xcode,
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -2992,22 +3027,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					_APPLE,
-					GL_GLEXT_PROTOTYPES,
-					"PCRE2_CODE_UNIT_WIDTH=8",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
-					GL_GLEXT_PROTOTYPES,
-					_APPLE,
-				);
-				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					../../../3rdTools/zlib/include,
 					../../../3rdTools/libpng/include,
 					../../../3rdTools/libjpeg,
 					../../include,
 					../../../include,
+					../../../drow/include,
 					../../../build/xcode,
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -3038,5 +3065,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 54BA05AC14A1B4B500E0350A /* Project object */;
+	rootObject = 54BA05AC14A1B4B500E0350B /* Project object */;
 }
