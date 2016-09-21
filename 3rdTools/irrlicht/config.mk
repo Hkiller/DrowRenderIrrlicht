@@ -194,14 +194,9 @@ $(product).c.sources := $(addprefix $(product-base)/source/Irrlicht/, \
                              irrXML.cpp \
                              CAttributes.cpp \
                              lzma/LzmaDec.c \
-                             CIrrDeviceSDL.cpp \
-                             CIrrDeviceLinux.cpp \
-                             CIrrDeviceConsole.cpp \
-                             CIrrDeviceStub.cpp \
-                             CIrrDeviceWin32.cpp \
-                             CIrrDeviceFB.cpp \
                              CLogger.cpp \
                              COSOperator.cpp \
+                             Irrlicht.cpp \
                              os.cpp \
                              leakHunter.cpp \
                              CProfiler.cpp \
@@ -236,5 +231,13 @@ $(product).c.sources := $(addprefix $(product-base)/source/Irrlicht/, \
                              CGUITreeView.cpp \
                              CGUIProfiler.cpp \
                      )
+
+$(product).mac.c.sources:= $(addprefix $(product-base)/source/Irrlicht/, \
+                               CIrrDeviceiOS.mm \
+                            )
+
+$(product).ios.c.sources:= $(addprefix $(product-base)/source/Irrlicht/, \
+                               CIrrDeviceiOS.mm \
+                            )
 
 $(eval $(call product-def,$(product)))
