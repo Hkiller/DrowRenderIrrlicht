@@ -1,6 +1,6 @@
 product:=irr_runtime
 $(product).type:=lib
-$(product).depends:=irrlicht ui_runtime
+$(product).depends:=irrlicht plugin_app_env ui_runtime 
 $(product).c.libraries:=
 $(product).c.sources:=$(wildcard $(product-base)/*.cpp)
 $(product).c.export-symbols:= $(product-base)/symbols.def

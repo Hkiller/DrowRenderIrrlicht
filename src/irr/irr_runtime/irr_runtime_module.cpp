@@ -28,7 +28,7 @@ static struct {
 irr_runtime_module_t
 irr_runtime_module_create(
     gd_app_context_t app, mem_allocrator_t alloc,
-    ui_data_mgr_t data_mgr, ui_cache_manager_t cache_mgr,
+    plugin_app_env_module_t app_env, ui_runtime_module_t runtime,
     const char * name, error_monitor_t em)
 {
     struct irr_runtime_module * module;
@@ -48,8 +48,8 @@ irr_runtime_module_create(
     module->m_alloc = alloc;
     module->m_em = em;
     module->m_debug = 0;
-    module->m_data_mgr = data_mgr;
-    module->m_cache_mgr = cache_mgr;
+    module->m_runtime = runtime;
+    module->m_app_env = app_env;
     
     for(component_pos = 0; component_pos < CPE_ARRAY_SIZE(s_auto_reg_products); ++component_pos) {
         if (s_auto_reg_products[component_pos].init(module) != 0) {

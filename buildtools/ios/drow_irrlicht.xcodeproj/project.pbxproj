@@ -2906,13 +2906,17 @@
 				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					_APPLE,
 					"$(inherited)",
+					_APPLE,
+					NO_IRR_COMPILE_WITH_GUI_,
+					NO_IRR_COMPILE_WITH_LIBJPEG_,
+					NO_IRR_COMPILE_WITH_CONSOLE_DEVICE_,
 				);
 				HEADER_SEARCH_PATHS = (
 					../../../3rdTools/zlib/include,
 					../../../3rdTools/libpng/include,
 					../../../3rdTools/libjpeg,
+					../../3rdTools/irrlicht/include,
 					../../include,
 					../../../include,
 					../../../drow/include,
@@ -2927,11 +2931,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					_APPLE,
+					NO_IRR_COMPILE_WITH_GUI_,
+					NO_IRR_COMPILE_WITH_LIBJPEG_,
+					NO_IRR_COMPILE_WITH_CONSOLE_DEVICE_,
+				);
 				HEADER_SEARCH_PATHS = (
 					../../../3rdTools/zlib/include,
 					../../../3rdTools/libpng/include,
 					../../../3rdTools/libjpeg,
+					../../3rdTools/irrlicht/include,
 					../../include,
 					../../../include,
 					../../../drow/include,
